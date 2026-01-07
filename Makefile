@@ -13,6 +13,8 @@ SHELL := zsh
 outputs=target1 target2
 .PHONY: help clean #  which targets are not represented by files
 
+all: bin/pueued bin/pueue
+
 help:
 	@echo "\e[4mTargets:\e[0m"
 	@grep '^[[:alnum:]].*:' Makefile

@@ -19,6 +19,7 @@ DIRSCRIPT="$(dirname "$(readlink -f "$0")")"
 # Start pueued daemon with the command $HOME/bin/pueued -d only if not already running
 if ! pgrep -f "pueued" > /dev/null; then
     $DIRSCRIPT/bin/pueued -d
+    sleep 2
 fi
 
 $DIRSCRIPT/bin/pueue $@
